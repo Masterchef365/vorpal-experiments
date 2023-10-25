@@ -1,0 +1,11 @@
+[package]
+name = "automata-vorpal"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+bytemuck = "1.14.0"
+rand = { version = "0.8", default-features = false, features = ["small_rng"] }
