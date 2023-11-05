@@ -1,5 +1,7 @@
 pub type Array2D = crate::array2d::Array2D<f32>;
 
+use glam::{Vec2, IVec2};
+
 pub struct SmokeSim {
     read: Array2D,
     write: Array2D,
@@ -151,8 +153,11 @@ fn lerp(a: f32, b: f32, t: f32) -> f32 {
 /// Bilinear interpolation of the given grid at the given coordinates
 #[track_caller]
 fn interp(grid: &Array2D, x: f32, y: f32) -> f32 {
-    bicubic_interp(grid, x, y)
-    //bilinear_interp(grid, x, y)
+    if x * 2.0 > grid.width() as f32 {
+        cubic_interp(grid, Vec2::new(x, y))
+    } else {
+        bilinear_interp(grid, x, y)
+    }
 }
 
 fn bilinear_interp(grid: &Array2D, x: f32, y: f32) -> f32 {
@@ -174,8 +179,39 @@ fn bilinear_interp(grid: &Array2D, x: f32, y: f32) -> f32 {
     )
 }
 
+fn cubic_interp(img: &Array2D, pt: Vec2) -> f32 {
+    let coeffs: [f32; 16] = [
+        1. / 6., -1. / 2., 1. / 2., -1. / 6.,
+        2. / 3., 0., -1., 1. / 2.,
+        1. / 6., 1. / 2., 1. / 2., -1. / 2.,
+        0., 0., 0., 1. / 6.
+    ];
+
+    let fr = pt.fract();
+    let coord = pt.floor().as_ivec2();
+    let mut col = 0.0;
+
+    for i in 0..4 {
+        for j in 0..4 {
+            let mut t = Vec2::new(1.0, 1.0);
+            let mut b = Vec2::ZERO;
+            for k in 0..4 {
+                b += t * Vec2::new(coeffs[i * 4 + k], coeffs[j * 4 + k]);
+                t *= fr;
+            }
+            let x_idx = (coord.x + i as i32 - 1).clamp(0, img.width() as i32 - 1) as usize;
+            let y_idx = (coord.y + j as i32 - 1).clamp(0, img.height() as i32 - 1) as usize;
+            let smp = img[(x_idx, y_idx)];
+            col += smp * b.x * b.y;
+        }
+    }
+
+    col
+}
+
+
+/*
 /// Bicubic interpolation of the given grid at the given coordinates
-#[track_caller]
 fn bicubic_interp(grid: &Array2D, x: f32, y: f32) -> f32 {
     // Bounds enforcement. No panics!
     let x_index = (x.floor() as isize).clamp(2, grid.width() as isize - 3);
@@ -209,3 +245,4 @@ fn bicubic_weight(t: f32) -> f32 {
     }
     0.0
 }
+*/
