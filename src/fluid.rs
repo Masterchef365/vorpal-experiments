@@ -34,6 +34,21 @@ impl FluidSim {
     pub fn step(&mut self, dt: f32, overstep: f32, n_iters: u32) {
         // Force incompressibility
         for _ in 0..n_iters {
+            // Enforce boundary conditions
+            for arr in [&mut self.read.v, &mut self.read.u] {
+                let (w, h) = (arr.width(), arr.height());
+                for y in 0..arr.height() {
+                    arr[(1, y)] = 0.;
+                    arr[(w-2, y)] = 0.;
+                }
+
+                for x in 0..arr.width() {
+                    arr[(x, 1)] = 0.;
+                    arr[(x, h-2)] = 0.;
+                }
+            }
+
+            // Solve
             for y in 1..self.read.v.height() - 2 {
                 for x in 1..self.read.u.width() - 2 {
                     let dx = self.read.u[(x + 1, y)] - self.read.u[(x, y)];
