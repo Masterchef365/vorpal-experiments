@@ -36,6 +36,19 @@ extern "C" {
     );
 }
 
+#[link(wasm_import_module = "colorfn")]
+extern "C" {
+    fn colorfn(
+        ptr: *mut f32,
+        width: f32,
+        height: f32,
+        x: f32,
+        y: f32,
+        time: f32,
+        cursor_x: f32,
+        cursor_y: f32,
+    );
+}
 
 pub fn call_ext(
     ext: unsafe extern "C" fn(*mut f32, f32, f32, f32, f32, f32, f32, f32),
@@ -151,10 +164,13 @@ impl Plugin {
             .collect();
 
         // Make image
+        self.out_rgba.clear();
+
         if self.last_cursor_x != -1.0 && cursor_x != -1.0 {
             for y in 0..self.out_height {
                 for x in 0..self.out_width {
-                    let rgba = call_ext(
+                    // Kernel
+                    let kern_out = call_ext(
                         kernel,
                         self.out_width as f32,
                         self.out_height as f32,
@@ -168,11 +184,13 @@ impl Plugin {
                     let delta_x = cursor_x - self.last_cursor_x;
                     let delta_y = cursor_y - self.last_cursor_y;
 
+                    let smoke = self.smoke_sim.smoke();
                     let (u, v) = self.fluid_sim.uv_mut();
                     let pos = (x as usize, y as usize);
-                    u[pos] += rgba[0] * delta_x;
-                    v[pos] += rgba[0] * delta_y;
+                    u[pos] += kern_out[0] * delta_x;
+                    v[pos] += kern_out[0] * delta_y;
 
+                    // Otherfn
                     let other = call_ext(
                         otherfn,
                         self.out_width as f32,
@@ -186,6 +204,18 @@ impl Plugin {
                     u[pos] = other[0];
                     v[pos] = other[1];
 
+                    // Color
+                    let rgba = call_ext(
+                        colorfn,
+                        self.out_width as f32,
+                        self.out_height as f32,
+                        x as f32,
+                        y as f32,
+                        smoke[pos],
+                        u[pos],
+                        v[pos]
+                    );
+                    self.out_rgba.extend_from_slice(&rgba);
                 }
             }
         }
