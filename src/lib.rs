@@ -22,7 +22,23 @@ extern "C" {
     );
 }
 
-pub fn call_kernel(
+#[link(wasm_import_module = "otherfn")]
+extern "C" {
+    fn otherfn(
+        ptr: *mut f32,
+        width: f32,
+        height: f32,
+        x: f32,
+        y: f32,
+        time: f32,
+        cursor_x: f32,
+        cursor_y: f32,
+    );
+}
+
+
+pub fn call_ext(
+    ext: unsafe extern "C" fn(*mut f32, f32, f32, f32, f32, f32, f32, f32),
     width: f32,
     height: f32,
     x: f32,
@@ -34,7 +50,7 @@ pub fn call_kernel(
     let mut out_data = [0_f32; 4];
 
     unsafe {
-        kernel(
+        ext(
             out_data.as_mut_ptr(),
             width,
             height,
@@ -88,7 +104,7 @@ impl Plugin {
         let fluid_sim = FluidSim::new(w, w);
         let mut smoke_sim = SmokeSim::new(w, w);
 
-        let intensity = 1e4;
+        let intensity = 1e3;
         smoke_sim.smoke_mut()[(w / 2, w / 3)] = intensity;
 
         Self {
@@ -138,7 +154,8 @@ impl Plugin {
         if self.last_cursor_x != -1.0 && cursor_x != -1.0 {
             for y in 0..self.out_height {
                 for x in 0..self.out_width {
-                    let rgba = call_kernel(
+                    let rgba = call_ext(
+                        kernel,
                         self.out_width as f32,
                         self.out_height as f32,
                         x as f32,
@@ -155,6 +172,20 @@ impl Plugin {
                     let pos = (x as usize, y as usize);
                     u[pos] += rgba[0] * delta_x;
                     v[pos] += rgba[0] * delta_y;
+
+                    let other = call_ext(
+                        otherfn,
+                        self.out_width as f32,
+                        self.out_height as f32,
+                        x as f32,
+                        y as f32,
+                        time,
+                        u[pos],
+                        v[pos],
+                    );
+                    u[pos] = other[0];
+                    v[pos] = other[1];
+
                 }
             }
         }

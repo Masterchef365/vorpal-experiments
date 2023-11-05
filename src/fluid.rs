@@ -1,5 +1,3 @@
-use crate::call_kernel;
-
 pub type Array2D = crate::array2d::Array2D<f32>;
 
 pub struct SmokeSim {
