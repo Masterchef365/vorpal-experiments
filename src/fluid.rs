@@ -151,6 +151,11 @@ fn lerp(a: f32, b: f32, t: f32) -> f32 {
 /// Bilinear interpolation of the given grid at the given coordinates
 #[track_caller]
 fn interp(grid: &Array2D, x: f32, y: f32) -> f32 {
+    bicubic_interp(grid, x, y)
+    //bilinear_interp(grid, x, y)
+}
+
+fn bilinear_interp(grid: &Array2D, x: f32, y: f32) -> f32 {
     // Bounds enforcement. No panics!
     let tl_x = (x.floor() as isize).clamp(0, grid.width() as isize - 1) as usize;
     let tl_y = (y.floor() as isize).clamp(0, grid.height() as isize - 1) as usize;
@@ -167,4 +172,40 @@ fn interp(grid: &Array2D, x: f32, y: f32) -> f32 {
         lerp(bl, br, x.fract()), // Bottom row
         y.fract(),
     )
+}
+
+/// Bicubic interpolation of the given grid at the given coordinates
+#[track_caller]
+fn bicubic_interp(grid: &Array2D, x: f32, y: f32) -> f32 {
+    // Bounds enforcement. No panics!
+    let x_index = (x.floor() as isize).clamp(2, grid.width() as isize - 3);
+    let y_index = (y.floor() as isize).clamp(2, grid.height() as isize - 3);
+
+    // Calculate fractional parts of coordinates
+    let dx = x - x.floor();
+    let dy = y - y.floor();
+
+    // Compute bicubic interpolation using 4x4 grid of neighboring points
+    let mut interpolated_value = 0.0;
+    for i in -1..=2isize {
+        for j in -1..=2isize {
+            let weight_x = bicubic_weight(dx - i as f32);
+            let weight_y = bicubic_weight(dy - j as f32);
+            let value = grid[((x_index + i) as usize, (y_index + j) as usize)];
+            interpolated_value += value * weight_x * weight_y;
+        }
+    }
+
+    interpolated_value
+}
+
+/// Bicubic interpolation weight function
+fn bicubic_weight(t: f32) -> f32 {
+    let t_abs = t.abs();
+    if t_abs <= 1.0 {
+        return 1.0 - (2.0 * t_abs.powi(2)) + (t_abs.powi(3));
+    } else if t_abs <= 2.0 {
+        return 4.0 - (8.0 * t_abs) + (5.0 * t_abs.powi(2)) - (t_abs.powi(3));
+    }
+    0.0
 }
