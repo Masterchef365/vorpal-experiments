@@ -1,1350 +1,1193 @@
 {
   "user_wasm_path": "/home/duncan/Projects/automata-vorpal/target/wasm32-unknown-unknown/release/automata_vorpal.wasm",
-  "nodes": {
-    "context": {
-      "inputs": {
-        "Position (pixels)": {
-          "Vec2": [
-            99.0,
-            99.0
-          ]
-        },
-        "Resolution (pixels)": {
-          "Vec2": [
-            100.0,
-            100.0
-          ]
-        },
-        "Time (seconds)": {
-          "Scalar": 17.598537
-        }
-      },
-      "samplers": {}
-    },
-    "state": {
-      "graph": {
-        "nodes": {
-          "map": [
-            {
-              "value": null,
-              "version": 0
+  "functions": [
+    [
+      "kernel",
+      {
+        "context": {
+          "inputs": {
+            "Position (pixels)": {
+              "Vec2": [
+                0.0,
+                0.0
+              ]
             },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 1,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "label": "Output",
-                "inputs": [
-                  [
-                    "x",
-                    [
+            "Resolution (pixels)": {
+              "Vec2": [
+                100.0,
+                100.0
+              ]
+            },
+            "Time (seconds)": {
+              "Scalar": 194.39021
+            },
+            "Cursor position (pixels)": {
+              "Vec2": [
+                12.442878,
+                86.74481
+              ]
+            }
+          },
+          "samplers": {}
+        },
+        "state": {
+          "graph": {
+            "nodes": {
+              "map": [
+                {
+                  "value": null,
+                  "version": 0
+                },
+                {
+                  "value": {
+                    "id": [
                       {
                         "idx": 1,
                         "version": 1
                       },
-                      130449502568287922849518183267840623136
-                    ]
-                  ]
-                ],
-                "outputs": [],
-                "user_data": {
-                  "template": {
-                    "Output": "Vec4"
-                  }
-                }
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 2,
-                    "version": 1
+                      43475525878879556246535134375710198150
+                    ],
+                    "label": "Output",
+                    "inputs": [
+                      [
+                        "x",
+                        [
+                          {
+                            "idx": 1,
+                            "version": 1
+                          },
+                          237058493376311286499741185992572536763
+                        ]
+                      ]
+                    ],
+                    "outputs": [],
+                    "user_data": {
+                      "template": {
+                        "Output": "Vec4"
+                      }
+                    }
                   },
-                  19171078110202744288864533970610478536
-                ],
-                "label": "Input Position (pixels) (Vec2)",
-                "inputs": [],
-                "outputs": [
-                  [
-                    "out",
-                    [
-                      {
-                        "idx": 1,
-                        "version": 1
-                      },
-                      144503348501797301026897699416058130521
-                    ]
-                  ]
-                ],
-                "user_data": {
-                  "template": {
-                    "Input": [
-                      "Position (pixels)",
-                      "Vec2"
-                    ]
-                  }
-                }
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 3,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "label": "Input Resolution (pixels) (Vec2)",
-                "inputs": [],
-                "outputs": [
-                  [
-                    "out",
-                    [
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
                       {
                         "idx": 2,
                         "version": 1
                       },
-                      144503348501797301026897699416058130521
-                    ]
-                  ]
-                ],
-                "user_data": {
-                  "template": {
-                    "Input": [
-                      "Resolution (pixels)",
-                      "Vec2"
-                    ]
-                  }
-                }
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 4,
-                    "version": 1
+                      43475525878879556246535134375710198150
+                    ],
+                    "label": "Input Position (pixels) (Vec2)",
+                    "inputs": [],
+                    "outputs": [
+                      [
+                        "out",
+                        [
+                          {
+                            "idx": 1,
+                            "version": 1
+                          },
+                          340254554912194105158015571787274792780
+                        ]
+                      ]
+                    ],
+                    "user_data": {
+                      "template": {
+                        "Input": [
+                          "Position (pixels)",
+                          "Vec2"
+                        ]
+                      }
+                    }
                   },
-                  19171078110202744288864533970610478536
-                ],
-                "label": "Operator (Vec2)",
-                "inputs": [
-                  [
-                    "x",
-                    [
-                      {
-                        "idx": 2,
-                        "version": 1
-                      },
-                      130449502568287922849518183267840623136
-                    ]
-                  ],
-                  [
-                    "y",
-                    [
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
                       {
                         "idx": 3,
                         "version": 1
                       },
-                      130449502568287922849518183267840623136
-                    ]
-                  ]
-                ],
-                "outputs": [
-                  [
-                    "out",
-                    [
+                      43475525878879556246535134375710198150
+                    ],
+                    "label": "Input Cursor position (pixels) (Vec2)",
+                    "inputs": [],
+                    "outputs": [
+                      [
+                        "out",
+                        [
+                          {
+                            "idx": 2,
+                            "version": 1
+                          },
+                          340254554912194105158015571787274792780
+                        ]
+                      ]
+                    ],
+                    "user_data": {
+                      "template": {
+                        "Input": [
+                          "Cursor position (pixels)",
+                          "Vec2"
+                        ]
+                      }
+                    }
+                  },
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
                       {
-                        "idx": 3,
+                        "idx": 4,
                         "version": 1
                       },
-                      144503348501797301026897699416058130521
-                    ]
-                  ]
-                ],
-                "user_data": {
-                  "template": {
-                    "ComponentInfixOp": [
-                      "Divide",
-                      "Vec2"
-                    ]
-                  }
-                }
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 5,
-                    "version": 3
+                      43475525878879556246535134375710198150
+                    ],
+                    "label": "Operator (Vec2)",
+                    "inputs": [
+                      [
+                        "x",
+                        [
+                          {
+                            "idx": 2,
+                            "version": 1
+                          },
+                          237058493376311286499741185992572536763
+                        ]
+                      ],
+                      [
+                        "y",
+                        [
+                          {
+                            "idx": 3,
+                            "version": 1
+                          },
+                          237058493376311286499741185992572536763
+                        ]
+                      ]
+                    ],
+                    "outputs": [
+                      [
+                        "out",
+                        [
+                          {
+                            "idx": 3,
+                            "version": 1
+                          },
+                          340254554912194105158015571787274792780
+                        ]
+                      ]
+                    ],
+                    "user_data": {
+                      "template": {
+                        "ComponentInfixOp": [
+                          "Subtract",
+                          "Vec2"
+                        ]
+                      }
+                    }
                   },
-                  19171078110202744288864533970610478536
-                ],
-                "label": "Operator (Vec2)",
-                "inputs": [
-                  [
-                    "x",
-                    [
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
                       {
                         "idx": 5,
                         "version": 3
                       },
-                      130449502568287922849518183267840623136
-                    ]
-                  ],
-                  [
-                    "y",
-                    [
-                      {
-                        "idx": 4,
-                        "version": 3
-                      },
-                      130449502568287922849518183267840623136
-                    ]
-                  ]
-                ],
-                "outputs": [
-                  [
-                    "out",
-                    [
-                      {
-                        "idx": 4,
-                        "version": 3
-                      },
-                      144503348501797301026897699416058130521
-                    ]
-                  ]
-                ],
-                "user_data": {
-                  "template": {
-                    "ComponentInfixOp": [
-                      "Multiply",
-                      "Vec2"
-                    ]
-                  }
-                }
-              },
-              "version": 3
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 6,
-                    "version": 1
+                      43475525878879556246535134375710198150
+                    ],
+                    "label": "Dot (Vec2)",
+                    "inputs": [
+                      [
+                        "x",
+                        [
+                          {
+                            "idx": 5,
+                            "version": 3
+                          },
+                          237058493376311286499741185992572536763
+                        ]
+                      ],
+                      [
+                        "y",
+                        [
+                          {
+                            "idx": 4,
+                            "version": 3
+                          },
+                          237058493376311286499741185992572536763
+                        ]
+                      ]
+                    ],
+                    "outputs": [
+                      [
+                        "out",
+                        [
+                          {
+                            "idx": 4,
+                            "version": 3
+                          },
+                          340254554912194105158015571787274792780
+                        ]
+                      ]
+                    ],
+                    "user_data": {
+                      "template": {
+                        "Dot": "Vec2"
+                      }
+                    }
                   },
-                  19171078110202744288864533970610478536
-                ],
-                "label": "Operator (Vec2)",
-                "inputs": [
-                  [
-                    "x",
-                    [
+                  "version": 3
+                },
+                {
+                  "value": {
+                    "id": [
                       {
                         "idx": 6,
                         "version": 1
                       },
-                      130449502568287922849518183267840623136
-                    ]
-                  ],
-                  [
-                    "y",
-                    [
+                      43475525878879556246535134375710198150
+                    ],
+                    "label": "Make Vec4",
+                    "inputs": [
+                      [
+                        "x",
+                        [
+                          {
+                            "idx": 6,
+                            "version": 1
+                          },
+                          237058493376311286499741185992572536763
+                        ]
+                      ],
+                      [
+                        "y",
+                        [
+                          {
+                            "idx": 7,
+                            "version": 1
+                          },
+                          237058493376311286499741185992572536763
+                        ]
+                      ],
+                      [
+                        "z",
+                        [
+                          {
+                            "idx": 8,
+                            "version": 1
+                          },
+                          237058493376311286499741185992572536763
+                        ]
+                      ],
+                      [
+                        "w",
+                        [
+                          {
+                            "idx": 9,
+                            "version": 1
+                          },
+                          237058493376311286499741185992572536763
+                        ]
+                      ]
+                    ],
+                    "outputs": [
+                      [
+                        "out",
+                        [
+                          {
+                            "idx": 5,
+                            "version": 1
+                          },
+                          340254554912194105158015571787274792780
+                        ]
+                      ]
+                    ],
+                    "user_data": {
+                      "template": {
+                        "Make": "Vec4"
+                      }
+                    }
+                  },
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
                       {
                         "idx": 7,
                         "version": 1
                       },
-                      130449502568287922849518183267840623136
-                    ]
-                  ]
-                ],
-                "outputs": [
-                  [
-                    "out",
-                    [
-                      {
-                        "idx": 5,
-                        "version": 1
-                      },
-                      144503348501797301026897699416058130521
-                    ]
-                  ]
-                ],
-                "user_data": {
-                  "template": {
-                    "ComponentInfixOp": [
-                      "Subtract",
-                      "Vec2"
-                    ]
-                  }
-                }
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 7,
-                    "version": 1
+                      43475525878879556246535134375710198150
+                    ],
+                    "label": "Operator (Scalar)",
+                    "inputs": [
+                      [
+                        "x",
+                        [
+                          {
+                            "idx": 10,
+                            "version": 1
+                          },
+                          237058493376311286499741185992572536763
+                        ]
+                      ],
+                      [
+                        "y",
+                        [
+                          {
+                            "idx": 11,
+                            "version": 1
+                          },
+                          237058493376311286499741185992572536763
+                        ]
+                      ]
+                    ],
+                    "outputs": [
+                      [
+                        "out",
+                        [
+                          {
+                            "idx": 6,
+                            "version": 1
+                          },
+                          340254554912194105158015571787274792780
+                        ]
+                      ]
+                    ],
+                    "user_data": {
+                      "template": {
+                        "ComponentInfixOp": [
+                          "LessThan",
+                          "Scalar"
+                        ]
+                      }
+                    }
                   },
-                  19171078110202744288864533970610478536
-                ],
-                "label": "Make Vec4",
-                "inputs": [
-                  [
-                    "x",
-                    [
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
                       {
                         "idx": 8,
                         "version": 1
                       },
-                      130449502568287922849518183267840623136
-                    ]
-                  ],
-                  [
-                    "y",
-                    [
+                      43475525878879556246535134375710198150
+                    ],
+                    "label": "Operator (Scalar)",
+                    "inputs": [
+                      [
+                        "x",
+                        [
+                          {
+                            "idx": 12,
+                            "version": 1
+                          },
+                          237058493376311286499741185992572536763
+                        ]
+                      ],
+                      [
+                        "y",
+                        [
+                          {
+                            "idx": 13,
+                            "version": 1
+                          },
+                          237058493376311286499741185992572536763
+                        ]
+                      ]
+                    ],
+                    "outputs": [
+                      [
+                        "out",
+                        [
+                          {
+                            "idx": 7,
+                            "version": 1
+                          },
+                          340254554912194105158015571787274792780
+                        ]
+                      ]
+                    ],
+                    "user_data": {
+                      "template": {
+                        "ComponentInfixOp": [
+                          "Multiply",
+                          "Scalar"
+                        ]
+                      }
+                    }
+                  },
+                  "version": 1
+                }
+              ],
+              "id": 43475525878879556246535134375710198150
+            },
+            "inputs": {
+              "map": [
+                {
+                  "value": null,
+                  "version": 0
+                },
+                {
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 1,
+                        "version": 1
+                      },
+                      237058493376311286499741185992572536763
+                    ],
+                    "typ": "Vec4",
+                    "value": {
+                      "Vec4": [
+                        0.25,
+                        0.36,
+                        0.54,
+                        0.0
+                      ]
+                    },
+                    "kind": "ConnectionOrConstant",
+                    "node": [
+                      {
+                        "idx": 1,
+                        "version": 1
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "shown_inline": true
+                  },
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 2,
+                        "version": 1
+                      },
+                      237058493376311286499741185992572536763
+                    ],
+                    "typ": "Vec2",
+                    "value": {
+                      "Vec2": [
+                        0.0,
+                        0.0
+                      ]
+                    },
+                    "kind": "ConnectionOrConstant",
+                    "node": [
+                      {
+                        "idx": 4,
+                        "version": 1
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "shown_inline": true
+                  },
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 3,
+                        "version": 1
+                      },
+                      237058493376311286499741185992572536763
+                    ],
+                    "typ": "Vec2",
+                    "value": {
+                      "Vec2": [
+                        0.0,
+                        0.0
+                      ]
+                    },
+                    "kind": "ConnectionOrConstant",
+                    "node": [
+                      {
+                        "idx": 4,
+                        "version": 1
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "shown_inline": true
+                  },
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 4,
+                        "version": 3
+                      },
+                      237058493376311286499741185992572536763
+                    ],
+                    "typ": "Vec2",
+                    "value": {
+                      "Vec2": [
+                        0.0,
+                        0.0
+                      ]
+                    },
+                    "kind": "ConnectionOrConstant",
+                    "node": [
+                      {
+                        "idx": 5,
+                        "version": 3
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "shown_inline": true
+                  },
+                  "version": 3
+                },
+                {
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 5,
+                        "version": 3
+                      },
+                      237058493376311286499741185992572536763
+                    ],
+                    "typ": "Vec2",
+                    "value": {
+                      "Vec2": [
+                        0.0,
+                        0.0
+                      ]
+                    },
+                    "kind": "ConnectionOrConstant",
+                    "node": [
+                      {
+                        "idx": 5,
+                        "version": 3
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "shown_inline": true
+                  },
+                  "version": 3
+                },
+                {
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 6,
+                        "version": 1
+                      },
+                      237058493376311286499741185992572536763
+                    ],
+                    "typ": "Scalar",
+                    "value": {
+                      "Scalar": 0.0
+                    },
+                    "kind": "ConnectionOrConstant",
+                    "node": [
+                      {
+                        "idx": 6,
+                        "version": 1
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "shown_inline": true
+                  },
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 7,
+                        "version": 1
+                      },
+                      237058493376311286499741185992572536763
+                    ],
+                    "typ": "Scalar",
+                    "value": {
+                      "Scalar": 0.0
+                    },
+                    "kind": "ConnectionOrConstant",
+                    "node": [
+                      {
+                        "idx": 6,
+                        "version": 1
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "shown_inline": true
+                  },
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 8,
+                        "version": 1
+                      },
+                      237058493376311286499741185992572536763
+                    ],
+                    "typ": "Scalar",
+                    "value": {
+                      "Scalar": 0.0
+                    },
+                    "kind": "ConnectionOrConstant",
+                    "node": [
+                      {
+                        "idx": 6,
+                        "version": 1
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "shown_inline": true
+                  },
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
                       {
                         "idx": 9,
                         "version": 1
                       },
-                      130449502568287922849518183267840623136
-                    ]
-                  ],
-                  [
-                    "z",
-                    [
-                      {
-                        "idx": 10,
-                        "version": 1
-                      },
-                      130449502568287922849518183267840623136
-                    ]
-                  ],
-                  [
-                    "w",
-                    [
-                      {
-                        "idx": 11,
-                        "version": 1
-                      },
-                      130449502568287922849518183267840623136
-                    ]
-                  ]
-                ],
-                "outputs": [
-                  [
-                    "out",
-                    [
+                      237058493376311286499741185992572536763
+                    ],
+                    "typ": "Scalar",
+                    "value": {
+                      "Scalar": 0.0
+                    },
+                    "kind": "ConnectionOrConstant",
+                    "node": [
                       {
                         "idx": 6,
                         "version": 1
                       },
-                      144503348501797301026897699416058130521
-                    ]
-                  ]
-                ],
-                "user_data": {
-                  "template": {
-                    "Make": "Vec4"
-                  }
-                }
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 8,
-                    "version": 1
+                      43475525878879556246535134375710198150
+                    ],
+                    "shown_inline": true
                   },
-                  19171078110202744288864533970610478536
-                ],
-                "label": "Dot (Vec2)",
-                "inputs": [
-                  [
-                    "x",
-                    [
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
                       {
-                        "idx": 12,
+                        "idx": 10,
                         "version": 1
                       },
-                      130449502568287922849518183267840623136
-                    ]
-                  ],
-                  [
-                    "y",
-                    [
-                      {
-                        "idx": 13,
-                        "version": 1
-                      },
-                      130449502568287922849518183267840623136
-                    ]
-                  ]
-                ],
-                "outputs": [
-                  [
-                    "out",
-                    [
+                      237058493376311286499741185992572536763
+                    ],
+                    "typ": "Scalar",
+                    "value": {
+                      "Scalar": 0.0
+                    },
+                    "kind": "ConnectionOrConstant",
+                    "node": [
                       {
                         "idx": 7,
                         "version": 1
                       },
-                      144503348501797301026897699416058130521
-                    ]
-                  ]
-                ],
-                "user_data": {
-                  "template": {
-                    "Dot": "Vec2"
-                  }
-                }
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 9,
-                    "version": 1
+                      43475525878879556246535134375710198150
+                    ],
+                    "shown_inline": true
                   },
-                  19171078110202744288864533970610478536
-                ],
-                "label": "Operator (Scalar)",
-                "inputs": [
-                  [
-                    "x",
-                    [
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
                       {
-                        "idx": 14,
+                        "idx": 11,
                         "version": 1
                       },
-                      130449502568287922849518183267840623136
-                    ]
-                  ],
-                  [
-                    "y",
-                    [
+                      237058493376311286499741185992572536763
+                    ],
+                    "typ": "Scalar",
+                    "value": {
+                      "Scalar": 50.0
+                    },
+                    "kind": "ConnectionOrConstant",
+                    "node": [
                       {
-                        "idx": 15,
+                        "idx": 7,
                         "version": 1
                       },
-                      130449502568287922849518183267840623136
-                    ]
-                  ]
-                ],
-                "outputs": [
-                  [
-                    "out",
-                    [
+                      43475525878879556246535134375710198150
+                    ],
+                    "shown_inline": true
+                  },
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 12,
+                        "version": 1
+                      },
+                      237058493376311286499741185992572536763
+                    ],
+                    "typ": "Scalar",
+                    "value": {
+                      "Scalar": 0.0
+                    },
+                    "kind": "ConnectionOrConstant",
+                    "node": [
                       {
                         "idx": 8,
                         "version": 1
                       },
-                      144503348501797301026897699416058130521
-                    ]
-                  ]
-                ],
-                "user_data": {
-                  "template": {
-                    "ComponentInfixOp": [
-                      "LessThan",
-                      "Scalar"
-                    ]
-                  }
+                      43475525878879556246535134375710198150
+                    ],
+                    "shown_inline": true
+                  },
+                  "version": 1
+                },
+                {
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 13,
+                        "version": 1
+                      },
+                      237058493376311286499741185992572536763
+                    ],
+                    "typ": "Scalar",
+                    "value": {
+                      "Scalar": 5.0
+                    },
+                    "kind": "ConnectionOrConstant",
+                    "node": [
+                      {
+                        "idx": 8,
+                        "version": 1
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "shown_inline": true
+                  },
+                  "version": 1
                 }
-              },
-              "version": 1
+              ],
+              "id": 237058493376311286499741185992572536763
             },
-            {
-              "value": null,
-              "version": 2
-            }
-          ],
-          "id": 19171078110202744288864533970610478536
-        },
-        "inputs": {
-          "map": [
-            {
-              "value": null,
-              "version": 0
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 1,
-                    "version": 1
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Vec4",
-                "value": {
-                  "Vec4": [
-                    0.23,
-                    0.0,
-                    0.0,
-                    0.0
-                  ]
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 1,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 2,
-                    "version": 1
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Vec2",
-                "value": {
-                  "Vec2": [
-                    0.0,
-                    0.0
-                  ]
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 4,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 3,
-                    "version": 1
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Vec2",
-                "value": {
-                  "Vec2": [
-                    0.0,
-                    0.0
-                  ]
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 4,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 4,
-                    "version": 3
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Vec2",
-                "value": {
-                  "Vec2": [
-                    2.0,
-                    2.0
-                  ]
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 5,
-                    "version": 3
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 3
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 5,
-                    "version": 3
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Vec2",
-                "value": {
-                  "Vec2": [
-                    0.0,
-                    0.0
-                  ]
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 5,
-                    "version": 3
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 3
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 6,
-                    "version": 1
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Vec2",
-                "value": {
-                  "Vec2": [
-                    0.0,
-                    0.0
-                  ]
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 6,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 7,
-                    "version": 1
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Vec2",
-                "value": {
-                  "Vec2": [
-                    1.0,
-                    1.0
-                  ]
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 6,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 8,
-                    "version": 1
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Scalar",
-                "value": {
-                  "Scalar": -1.0
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 7,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 9,
-                    "version": 1
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Scalar",
-                "value": {
-                  "Scalar": 18.0
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 7,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 10,
-                    "version": 1
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Scalar",
-                "value": {
-                  "Scalar": 0.0
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 7,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 11,
-                    "version": 1
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Scalar",
-                "value": {
-                  "Scalar": 18.0
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 7,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 12,
-                    "version": 1
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Vec2",
-                "value": {
-                  "Vec2": [
-                    0.0,
-                    0.0
-                  ]
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 8,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 13,
-                    "version": 1
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Vec2",
-                "value": {
-                  "Vec2": [
-                    0.0,
-                    0.0
-                  ]
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 8,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 14,
-                    "version": 1
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Scalar",
-                "value": {
-                  "Scalar": 0.0
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 9,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 15,
-                    "version": 1
-                  },
-                  130449502568287922849518183267840623136
-                ],
-                "typ": "Scalar",
-                "value": {
-                  "Scalar": 0.2
-                },
-                "kind": "ConnectionOrConstant",
-                "node": [
-                  {
-                    "idx": 9,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "shown_inline": true
-              },
-              "version": 1
-            },
-            {
-              "value": null,
-              "version": 2
-            }
-          ],
-          "id": 130449502568287922849518183267840623136
-        },
-        "outputs": {
-          "map": [
-            {
-              "value": null,
-              "version": 0
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 1,
-                    "version": 1
-                  },
-                  144503348501797301026897699416058130521
-                ],
-                "node": [
-                  {
-                    "idx": 2,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "typ": "Vec2"
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 2,
-                    "version": 1
-                  },
-                  144503348501797301026897699416058130521
-                ],
-                "node": [
-                  {
-                    "idx": 3,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "typ": "Vec2"
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 3,
-                    "version": 1
-                  },
-                  144503348501797301026897699416058130521
-                ],
-                "node": [
-                  {
-                    "idx": 4,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "typ": "Vec2"
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 4,
-                    "version": 3
-                  },
-                  144503348501797301026897699416058130521
-                ],
-                "node": [
-                  {
-                    "idx": 5,
-                    "version": 3
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "typ": "Vec2"
-              },
-              "version": 3
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 5,
-                    "version": 1
-                  },
-                  144503348501797301026897699416058130521
-                ],
-                "node": [
-                  {
-                    "idx": 6,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "typ": "Vec2"
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 6,
-                    "version": 1
-                  },
-                  144503348501797301026897699416058130521
-                ],
-                "node": [
-                  {
-                    "idx": 7,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "typ": "Vec4"
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 7,
-                    "version": 1
-                  },
-                  144503348501797301026897699416058130521
-                ],
-                "node": [
-                  {
-                    "idx": 8,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "typ": "Scalar"
-              },
-              "version": 1
-            },
-            {
-              "value": {
-                "id": [
-                  {
-                    "idx": 8,
-                    "version": 1
-                  },
-                  144503348501797301026897699416058130521
-                ],
-                "node": [
-                  {
-                    "idx": 9,
-                    "version": 1
-                  },
-                  19171078110202744288864533970610478536
-                ],
-                "typ": "Scalar"
-              },
-              "version": 1
-            },
-            {
-              "value": null,
-              "version": 2
-            }
-          ],
-          "id": 144503348501797301026897699416058130521
-        },
-        "connections": {
-          "map": [
-            {
-              "value": null,
-              "version": 0
-            },
-            {
-              "value": [
+            "outputs": {
+              "map": [
                 {
-                  "idx": 6,
+                  "value": null,
+                  "version": 0
+                },
+                {
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 1,
+                        "version": 1
+                      },
+                      340254554912194105158015571787274792780
+                    ],
+                    "node": [
+                      {
+                        "idx": 2,
+                        "version": 1
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "typ": "Vec2"
+                  },
                   "version": 1
                 },
-                144503348501797301026897699416058130521
-              ],
-              "version": 1
-            },
-            {
-              "value": [
                 {
-                  "idx": 1,
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 2,
+                        "version": 1
+                      },
+                      340254554912194105158015571787274792780
+                    ],
+                    "node": [
+                      {
+                        "idx": 3,
+                        "version": 1
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "typ": "Vec2"
+                  },
                   "version": 1
                 },
-                144503348501797301026897699416058130521
-              ],
-              "version": 1
-            },
-            {
-              "value": [
                 {
-                  "idx": 2,
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 3,
+                        "version": 1
+                      },
+                      340254554912194105158015571787274792780
+                    ],
+                    "node": [
+                      {
+                        "idx": 4,
+                        "version": 1
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "typ": "Vec2"
+                  },
                   "version": 1
                 },
-                144503348501797301026897699416058130521
-              ],
-              "version": 1
-            },
-            {
-              "value": null,
-              "version": 0
-            },
-            {
-              "value": [
                 {
-                  "idx": 3,
-                  "version": 1
-                },
-                144503348501797301026897699416058130521
-              ],
-              "version": 3
-            },
-            {
-              "value": [
-                {
-                  "idx": 4,
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 4,
+                        "version": 3
+                      },
+                      340254554912194105158015571787274792780
+                    ],
+                    "node": [
+                      {
+                        "idx": 5,
+                        "version": 3
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "typ": "Scalar"
+                  },
                   "version": 3
                 },
-                144503348501797301026897699416058130521
-              ],
-              "version": 1
-            },
-            {
-              "value": null,
-              "version": 0
-            },
-            {
-              "value": [
                 {
-                  "idx": 8,
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 5,
+                        "version": 1
+                      },
+                      340254554912194105158015571787274792780
+                    ],
+                    "node": [
+                      {
+                        "idx": 6,
+                        "version": 1
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "typ": "Vec4"
+                  },
                   "version": 1
                 },
-                144503348501797301026897699416058130521
-              ],
-              "version": 1
-            },
-            {
-              "value": null,
-              "version": 0
-            },
-            {
-              "value": null,
-              "version": 0
-            },
-            {
-              "value": null,
-              "version": 0
-            },
-            {
-              "value": [
                 {
-                  "idx": 5,
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 6,
+                        "version": 1
+                      },
+                      340254554912194105158015571787274792780
+                    ],
+                    "node": [
+                      {
+                        "idx": 7,
+                        "version": 1
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "typ": "Scalar"
+                  },
                   "version": 1
                 },
-                144503348501797301026897699416058130521
-              ],
-              "version": 1
-            },
-            {
-              "value": [
                 {
-                  "idx": 5,
+                  "value": {
+                    "id": [
+                      {
+                        "idx": 7,
+                        "version": 1
+                      },
+                      340254554912194105158015571787274792780
+                    ],
+                    "node": [
+                      {
+                        "idx": 8,
+                        "version": 1
+                      },
+                      43475525878879556246535134375710198150
+                    ],
+                    "typ": "Scalar"
+                  },
+                  "version": 1
+                }
+              ],
+              "id": 340254554912194105158015571787274792780
+            },
+            "connections": {
+              "map": [
+                {
+                  "value": null,
+                  "version": 0
+                },
+                {
+                  "value": [
+                    {
+                      "idx": 5,
+                      "version": 1
+                    },
+                    340254554912194105158015571787274792780
+                  ],
                   "version": 1
                 },
-                144503348501797301026897699416058130521
-              ],
-              "version": 1
-            },
-            {
-              "value": [
                 {
-                  "idx": 7,
+                  "value": [
+                    {
+                      "idx": 2,
+                      "version": 1
+                    },
+                    340254554912194105158015571787274792780
+                  ],
                   "version": 1
                 },
-                144503348501797301026897699416058130521
+                {
+                  "value": [
+                    {
+                      "idx": 1,
+                      "version": 1
+                    },
+                    340254554912194105158015571787274792780
+                  ],
+                  "version": 1
+                },
+                {
+                  "value": [
+                    {
+                      "idx": 3,
+                      "version": 1
+                    },
+                    340254554912194105158015571787274792780
+                  ],
+                  "version": 3
+                },
+                {
+                  "value": [
+                    {
+                      "idx": 3,
+                      "version": 1
+                    },
+                    340254554912194105158015571787274792780
+                  ],
+                  "version": 3
+                },
+                {
+                  "value": [
+                    {
+                      "idx": 7,
+                      "version": 1
+                    },
+                    340254554912194105158015571787274792780
+                  ],
+                  "version": 1
+                },
+                {
+                  "value": [
+                    {
+                      "idx": 7,
+                      "version": 1
+                    },
+                    340254554912194105158015571787274792780
+                  ],
+                  "version": 1
+                },
+                {
+                  "value": [
+                    {
+                      "idx": 7,
+                      "version": 1
+                    },
+                    340254554912194105158015571787274792780
+                  ],
+                  "version": 1
+                },
+                {
+                  "value": null,
+                  "version": 0
+                },
+                {
+                  "value": [
+                    {
+                      "idx": 4,
+                      "version": 3
+                    },
+                    340254554912194105158015571787274792780
+                  ],
+                  "version": 1
+                },
+                {
+                  "value": null,
+                  "version": 0
+                },
+                {
+                  "value": [
+                    {
+                      "idx": 6,
+                      "version": 1
+                    },
+                    340254554912194105158015571787274792780
+                  ],
+                  "version": 1
+                }
               ],
-              "version": 1
+              "id": 237058493376311286499741185992572536763
             }
+          },
+          "node_order": [
+            [
+              {
+                "idx": 4,
+                "version": 1
+              },
+              43475525878879556246535134375710198150
+            ],
+            [
+              {
+                "idx": 3,
+                "version": 1
+              },
+              43475525878879556246535134375710198150
+            ],
+            [
+              {
+                "idx": 2,
+                "version": 1
+              },
+              43475525878879556246535134375710198150
+            ],
+            [
+              {
+                "idx": 5,
+                "version": 3
+              },
+              43475525878879556246535134375710198150
+            ],
+            [
+              {
+                "idx": 7,
+                "version": 1
+              },
+              43475525878879556246535134375710198150
+            ],
+            [
+              {
+                "idx": 1,
+                "version": 1
+              },
+              43475525878879556246535134375710198150
+            ],
+            [
+              {
+                "idx": 6,
+                "version": 1
+              },
+              43475525878879556246535134375710198150
+            ],
+            [
+              {
+                "idx": 8,
+                "version": 1
+              },
+              43475525878879556246535134375710198150
+            ]
           ],
-          "id": 130449502568287922849518183267840623136
-        }
-      },
-      "node_order": [
-        [
-          {
-            "idx": 3,
-            "version": 1
+          "connection_in_progress": null,
+          "selected_nodes": [],
+          "ongoing_box_selection": null,
+          "node_positions": {
+            "map": [
+              {
+                "value": null,
+                "version": 0
+              },
+              {
+                "value": {
+                  "x": 798.3938,
+                  "y": 240.48323
+                },
+                "version": 1
+              },
+              {
+                "value": {
+                  "x": 313.41965,
+                  "y": 217.23457
+                },
+                "version": 1
+              },
+              {
+                "value": {
+                  "x": 308.27963,
+                  "y": 180.24236
+                },
+                "version": 1
+              },
+              {
+                "value": {
+                  "x": 408.7876,
+                  "y": 197.78737
+                },
+                "version": 1
+              },
+              {
+                "value": {
+                  "x": 503.62692,
+                  "y": 197.76302
+                },
+                "version": 3
+              },
+              {
+                "value": {
+                  "x": 739.2328,
+                  "y": 211.0948
+                },
+                "version": 1
+              },
+              {
+                "value": {
+                  "x": 564.8721,
+                  "y": 202.8437
+                },
+                "version": 1
+              },
+              {
+                "value": {
+                  "x": 651.76013,
+                  "y": 207.8701
+                },
+                "version": 1
+              }
+            ],
+            "id": 43475525878879556246535134375710198150
           },
-          19171078110202744288864533970610478536
-        ],
-        [
-          {
-            "idx": 2,
-            "version": 1
-          },
-          19171078110202744288864533970610478536
-        ],
-        [
-          {
-            "idx": 4,
-            "version": 1
-          },
-          19171078110202744288864533970610478536
-        ],
-        [
-          {
-            "idx": 5,
-            "version": 3
-          },
-          19171078110202744288864533970610478536
-        ],
-        [
-          {
-            "idx": 6,
-            "version": 1
-          },
-          19171078110202744288864533970610478536
-        ],
-        [
-          {
-            "idx": 8,
-            "version": 1
-          },
-          19171078110202744288864533970610478536
-        ],
-        [
-          {
-            "idx": 7,
-            "version": 1
-          },
-          19171078110202744288864533970610478536
-        ],
-        [
-          {
-            "idx": 1,
-            "version": 1
-          },
-          19171078110202744288864533970610478536
-        ],
-        [
-          {
-            "idx": 9,
-            "version": 1
-          },
-          19171078110202744288864533970610478536
-        ]
-      ],
-      "connection_in_progress": null,
-      "selected_nodes": [],
-      "ongoing_box_selection": null,
-      "node_positions": {
-        "map": [
-          {
-            "value": null,
-            "version": 0
-          },
-          {
-            "value": {
-              "x": 1358.1107,
-              "y": 516.598
+          "node_finder": null,
+          "pan_zoom": {
+            "pan": {
+              "x": -295.32623,
+              "y": -102.125305
             },
-            "version": 1
+            "zoom": 0.34368595
           },
-          {
-            "value": {
-              "x": -723.447,
-              "y": 340.57574
-            },
-            "version": 1
-          },
-          {
-            "value": {
-              "x": -732.447,
-              "y": 454.18964
-            },
-            "version": 1
-          },
-          {
-            "value": {
-              "x": -350.37598,
-              "y": 367.50998
-            },
-            "version": 1
-          },
-          {
-            "value": {
-              "x": -15.994629,
-              "y": 392.7093
-            },
-            "version": 3
-          },
-          {
-            "value": {
-              "x": 310.2934,
-              "y": 415.68573
-            },
-            "version": 1
-          },
-          {
-            "value": {
-              "x": 1178.8229,
-              "y": 483.57263
-            },
-            "version": 1
-          },
-          {
-            "value": {
-              "x": 627.29315,
-              "y": 431.4499
-            },
-            "version": 1
-          },
-          {
-            "value": {
-              "x": 853.995,
-              "y": 435.581
-            },
-            "version": 1
-          },
-          {
-            "value": null,
-            "version": 0
-          }
-        ],
-        "id": 19171078110202744288864533970610478536
-      },
-      "node_finder": null,
-      "pan_zoom": {
-        "pan": {
-          "x": -938.63965,
-          "y": -244.2449
+          "_user_state": null
         },
-        "zoom": 1.2184755
-      },
-      "_user_state": null
-    },
-    "user_state": {
-      "active_node": null
-    }
-  }
+        "user_state": {
+          "active_node": null
+        }
+      }
+    ]
+  ],
+  "selected_function": 0
 }
